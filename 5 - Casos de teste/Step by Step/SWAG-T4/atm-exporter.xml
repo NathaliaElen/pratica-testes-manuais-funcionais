@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10035</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2025-07-18 19:50:45 UTC</exportDate>
+    <folders>
+        <folder fullPath="Autentificação/Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="249323779" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Nathália Elen de Souza Fialho de Araujo</createdBy>
+            <createdOn>2025-07-18 18:11:39 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Autentificação/Login]]></folder>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Login de Usuário ]]></summary>
+                </issue>
+            </issues>
+            <labels>
+                <label><![CDATA[Sprint-1]]></label>
+                <label><![CDATA[Web]]></label>
+            </labels>
+            <name><![CDATA[Tentativa de login sem preencher usuário]]></name>
+            <objective><![CDATA[Validar se o sistema impede o login e exibe a mensagem de erro apropriada quando o campo de usu&aacute;rio &eacute; deixado em branco.]]></objective>
+            <owner>712020:a03810a5-d3fd-4065-8444-1e0235b449b4</owner>
+            <precondition><![CDATA[O navegador deve estar aberto e a p&aacute;gina de login do Swag Labs (https://www.saucedemo.com/) deve estar carregada.<br>Ter em m&atilde;os uma password v&aacute;lida (ex: secret_sauce) para preenchimento.]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Abrir o navegador e acessar a URL do Swag Labs.]]></description>
+                        <expectedResult><![CDATA[A tela de login &eacute; exibida, com os campos &quot;Username&quot; e &quot;Password&quot; e o bot&atilde;o &quot;Login&quot;.]]></expectedResult>
+                        <testData><![CDATA[https://www.saucedemo.com/]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[No campo &quot;Username&quot;, n&atilde;o digitar um usu&aacute;rio v&aacute;lido.]]></description>
+                        <expectedResult><![CDATA[<p id="isPasted">Ent&atilde;o o usu&aacute;rio permanece na tela de login</p>]]></expectedResult>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[<u>No campo &quot;Password&quot;, digitar a senha v&aacute;lida.</u>]]></description>
+                        <expectedResult><![CDATA[O campo &quot;Password&quot; exibe caracteres ocultos (bolinhas ou asteriscos).]]></expectedResult>
+                        <testData><![CDATA[secret_sauce]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Clicar no bot&atilde;o &quot;Login&quot;.]]></description>
+                        <expectedResult><![CDATA[O sistema processa as credenciais.]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Verificar a p&aacute;gina ap&oacute;s tentativa de login.]]></description>
+                        <expectedResult><![CDATA[<p id="isPasted">Ent&atilde;o o usu&aacute;rio permanece na tela de login</p><p id="isPasted">E uma mensagem de erro &quot;Epic sadface: Username is required&quot; &eacute; exibida</p><br>]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>

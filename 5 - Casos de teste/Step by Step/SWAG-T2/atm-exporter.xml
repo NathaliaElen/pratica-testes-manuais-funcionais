@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10035</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2025-07-18 19:48:37 UTC</exportDate>
+    <folders>
+        <folder fullPath="Autentificação/Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="249319708" key="SWAG-T2" paramType="PARAMETER">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Nathália Elen de Souza Fialho de Araujo</createdBy>
+            <createdOn>2025-07-18 17:49:01 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Autentificação/Login]]></folder>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Login de Usuário ]]></summary>
+                </issue>
+            </issues>
+            <labels>
+                <label><![CDATA[Sprint-1]]></label>
+                <label><![CDATA[Web]]></label>
+            </labels>
+            <name><![CDATA[Tentativa de login com credenciais inválidas]]></name>
+            <objective><![CDATA[Realizar login, mas as credenciais est&atilde;o inv&aacute;lidas]]></objective>
+            <owner>712020:a03810a5-d3fd-4065-8444-1e0235b449b4</owner>
+            <precondition><![CDATA[Nenhuma
+espec&iacute;fica. Navegador aberto na URL do Swag Labs.]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters>
+                <parameter index="0">
+                    <defaultValue><![CDATA[172.17.25.54]]></defaultValue>
+                    <name><![CDATA[Servidor ]]></name>
+                </parameter>
+            </parameters>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Abrir o navegador e acessar a URL do Swag Labs.]]></description>
+                        <expectedResult><![CDATA[A tela de login &eacute; exibida, com os campos &quot;Username&quot; e &quot;Password&quot; e o bot&atilde;o &quot;Login&quot;.]]></expectedResult>
+                        <testData><![CDATA[<code id="isPasted">https://www.saucedemo.com/</code>]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[No campo &quot;Username&quot;, digitar o usu&aacute;rio inv&aacute;lido.]]></description>
+                        <expectedResult><![CDATA[O campo &quot;Username&quot; exibe usuario_falso.]]></expectedResult>
+                        <testData><![CDATA[usuario_falso]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[No campo &quot;Password&quot;, digitar a senha inv&aacute;lida.]]></description>
+                        <expectedResult><![CDATA[O campo &quot;Password&quot; exibe caracteres ocultos (bolinhas ou asteriscos).]]></expectedResult>
+                        <testData><![CDATA[senha_falso]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Clicar no bot&atilde;o &quot;Login&quot;.]]></description>
+                        <expectedResult><![CDATA[O sistema processa as credenciais.]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Verificar a p&aacute;gina ap&oacute;s tentativa de login.]]></description>
+                        <expectedResult><![CDATA[<p id="isPasted">Ent&atilde;o o usu&aacute;rio permanece na tela de login</p><p id="isPasted">E uma mensagem de erro &quot;Epic sadface: Username and password do not match any user in this service&quot; &eacute; exibida</p><br>]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
